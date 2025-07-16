@@ -7,10 +7,10 @@ export default function KontakPage() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const form = e.currentTarget;
-    const name = form.name.value;
-    const email = form.email.value;
-    const message = form.message.value;
+    const formData = new FormData(e.currentTarget);
+    const name = formData.get("name") as string;
+    const email = formData.get("email") as string;
+    const message = formData.get("message") as string;
 
     const res = await fetch("/api/kontak", {
       method: "POST",
@@ -20,7 +20,7 @@ export default function KontakPage() {
 
     if (res.ok) {
       setSubmitted(true);
-      form.reset();
+      e.currentTarget.reset(); // Reset form setelah submit
     } else {
       alert("Gagal mengirim pesan. Coba lagi nanti.");
     }
@@ -36,8 +36,18 @@ export default function KontakPage() {
       </p>
 
       <div className="space-y-3 text-gray-800">
-        <p><strong>📞 Telepon / WA:</strong> <a href="https://wa.me/6285694682877" target="_blank" className="text-blue-600 hover:underline">+62 812-3456-7890</a></p>
-        <p><strong>📧 Email:</strong> <a href="mailto:sekretariat@gereja.com" className="text-blue-600 hover:underline">sekretariat@gereja.com</a></p>
+        <p>
+          <strong>📞 Telepon / WA:</strong>{" "}
+          <a href="https://wa.me/6285694682877" target="_blank" className="text-blue-600 hover:underline" rel="noopener noreferrer">
+            +62 812-3456-7890
+          </a>
+        </p>
+        <p>
+          <strong>📧 Email:</strong>{" "}
+          <a href="mailto:sekretariat@gereja.com" className="text-blue-600 hover:underline">
+            sekretariat@gereja.com
+          </a>
+        </p>
         <p><strong>🏛️ Alamat:</strong> Jl. Damai No. 123, Cikarang Timur, Jawa Barat</p>
       </div>
 
