@@ -21,7 +21,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 export async function PUT(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query;
-  const body = await req.json();
+  const body = req.body;
 
   const updated = await prisma.keluarga.update({
     where: { id: id as string },
