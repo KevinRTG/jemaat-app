@@ -57,7 +57,7 @@ export default function LandingPage() {
           className="hidden md:flex items-center justify-center"
         >
           <img
-            src="/public/gkologo.png"
+            src="/gkologo.png"
             alt="logo"
             className="rounded-xl shadow-xl w-full h-auto object-cover transition-transform hover:scale-105"
           />
