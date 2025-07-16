@@ -5,52 +5,52 @@ generator client {
   provider = "prisma-client-js"
 }
 
-
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
 model User {
-  id             String     @id @default(cuid())
-  name           String
-  email          String     @unique
-  password       String?    // buat nullable agar OAuth bisa login
-  role           String     @default("user")
-  keluarga       Keluarga[] 
-  createdAt      DateTime   @default(now())
+  id            String    @id @default(cuid())
+  name          String
+  email         String    @unique
+  password      String? // nullable untuk OAuth
+  role          String    @default("user")
+  createdAt     DateTime  @default(now())
+  image         String?
+  emailVerified DateTime?
 
-  image          String?    // untuk simpan avatar dari Google
-  emailVerified  DateTime?  // untuk OAuth juga
-  accounts       Account[]
-  sessions       Session[]
+  accounts Account[]
+  sessions Session[]
+
+  keluarga Keluarga[] @relation("UserToKeluarga")
 }
 
-
 model Keluarga {
-  id              String   @id @default(cuid())
-  kepalaKeluarga  String
-  noKK            String   @unique
-  alamat          String
-  anggota         Json     // berisi array anggota keluarga (nama, umur, relasi, status baptis/sidi)
-  userId          String
-  user            User     @relation("UserToKeluarga", fields: [userId], references: [id], onDelete: Cascade)
-  createdAt       DateTime @default(now())
+  id             String   @id @default(cuid())
+  kepalaKeluarga String
+  noKK           String   @unique
+  alamat         String
+  anggota        Json
+  userId         String
+  createdAt      DateTime @default(now())
+
+  user User @relation("UserToKeluarga", fields: [userId], references: [id], onDelete: Cascade)
 }
 
 model Account {
-  id                 String  @id @default(cuid())
-  userId             String
-  type               String
-  provider           String
-  providerAccountId  String
-  refresh_token      String?   @db.Text
-  access_token       String?   @db.Text
-  expires_at         Int?
-  token_type         String?
-  scope              String?
-  id_token           String?   @db.Text
-  session_state      String?
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
 
   user User @relation(fields: [userId], references: [id])
 
