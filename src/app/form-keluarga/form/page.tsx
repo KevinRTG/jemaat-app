@@ -1,8 +1,9 @@
-'use client';
+// app/form-keluarga/form/page.tsx
+"use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { getSession } from "next-auth/react";
 
-// ✅ Tambahkan tipe khusus untuk anggota
 type Anggota = {
   nama: string;
   umur: string;
@@ -10,7 +11,8 @@ type Anggota = {
   status: string;
 };
 
-export default function FormKeluarga({ userId }: { userId: string }) {
+export default function FormKeluarga() {
+  const [userId, setUserId] = useState<string | null>(null);
   const [form, setForm] = useState({
     kepalaKeluarga: "",
     noKK: "",
@@ -20,6 +22,15 @@ export default function FormKeluarga({ userId }: { userId: string }) {
   const [anggota, setAnggota] = useState<Anggota[]>([
     { nama: "", umur: "", relasi: "", status: "" },
   ]);
+
+  useEffect(() => {
+    // Ambil user session di client
+    getSession().then((session) => {
+      if (session?.user?.id) {
+        setUserId(session.user.id);
+      }
+    });
+  }, []);
 
   const handleAnggotaChange = (index: number, field: keyof Anggota, value: string) => {
     const updated = [...anggota];
@@ -33,6 +44,8 @@ export default function FormKeluarga({ userId }: { userId: string }) {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!userId) return alert("User tidak terdeteksi.");
+
     const res = await fetch("/api/kartu-keluarga", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
