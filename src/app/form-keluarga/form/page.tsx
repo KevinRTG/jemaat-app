@@ -1,8 +1,8 @@
 // app/form-keluarga/form/page.tsx
-"use client";
+'use client';
 
-import { useState, useEffect } from "react";
-import { getSession } from "next-auth/react";
+import { useEffect, useState } from 'react';
+import { getSession } from 'next-auth/react';
 
 type Anggota = {
   nama: string;
@@ -11,20 +11,19 @@ type Anggota = {
   status: string;
 };
 
-export default function FormKeluarga() {
+export default function FormKeluargaPage() {
   const [userId, setUserId] = useState<string | null>(null);
   const [form, setForm] = useState({
-    kepalaKeluarga: "",
-    noKK: "",
-    alamat: "",
+    kepalaKeluarga: '',
+    noKK: '',
+    alamat: '',
   });
 
   const [anggota, setAnggota] = useState<Anggota[]>([
-    { nama: "", umur: "", relasi: "", status: "" },
+    { nama: '', umur: '', relasi: '', status: '' },
   ]);
 
   useEffect(() => {
-    // Ambil user session di client
     getSession().then((session) => {
       if (session?.user?.id) {
         setUserId(session.user.id);
@@ -39,23 +38,26 @@ export default function FormKeluarga() {
   };
 
   const addAnggota = () => {
-    setAnggota([...anggota, { nama: "", umur: "", relasi: "", status: "" }]);
+    setAnggota([...anggota, { nama: '', umur: '', relasi: '', status: '' }]);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!userId) return alert("User tidak terdeteksi.");
+    if (!userId) {
+      alert('User tidak terdeteksi.');
+      return;
+    }
 
-    const res = await fetch("/api/kartu-keluarga", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
+    const res = await fetch('/api/kartu-keluarga', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ ...form, anggota, userId }),
     });
 
     if (res.ok) {
-      alert("Data kartu keluarga berhasil disimpan!");
+      alert('Data kartu keluarga berhasil disimpan!');
     } else {
-      alert("Gagal menyimpan data");
+      alert('Gagal menyimpan data');
     }
   };
 
@@ -92,29 +94,30 @@ export default function FormKeluarga() {
             placeholder="Nama"
             className="input"
             value={a.nama}
-            onChange={(e) => handleAnggotaChange(i, "nama", e.target.value)}
+            onChange={(e) => handleAnggotaChange(i, 'nama', e.target.value)}
           />
           <input
             placeholder="Umur"
             type="number"
             className="input"
             value={a.umur}
-            onChange={(e) => handleAnggotaChange(i, "umur", e.target.value)}
+            onChange={(e) => handleAnggotaChange(i, 'umur', e.target.value)}
           />
           <input
             placeholder="Relasi"
             className="input"
             value={a.relasi}
-            onChange={(e) => handleAnggotaChange(i, "relasi", e.target.value)}
+            onChange={(e) => handleAnggotaChange(i, 'relasi', e.target.value)}
           />
           <input
             placeholder="Status (Baptis/Sidi)"
             className="input"
             value={a.status}
-            onChange={(e) => handleAnggotaChange(i, "status", e.target.value)}
+            onChange={(e) => handleAnggotaChange(i, 'status', e.target.value)}
           />
         </div>
       ))}
+
       <button type="button" onClick={addAnggota} className="btn bg-gray-500 text-white">
         Tambah Anggota
       </button>
