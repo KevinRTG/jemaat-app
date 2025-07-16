@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff; /* Putih */
+  --foreground: #111111; /* Teks gelap */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans, Arial, Helvetica, sans-serif);
+  --font-mono: var(--font-geist-mono, monospace);
+}
+
+/* Hapus dark mode agar selalu light mode */
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  @apply bg-gray-50 text-gray-900;
+}
+
+/* Input styling */
+.input {
+  @apply w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+/* Button styling */
+.btn {
+  @apply px-4 py-2 rounded font-semibold text-white bg-blue-600 hover:bg-blue-700 transition;
+}
