@@ -1,7 +1,9 @@
-// next.config.ts
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
-    appDir: true,
-  },
-}
+    // Hapus ini kalau error
+    // appDir: true 
+  }
+};
+
 export default nextConfig;
