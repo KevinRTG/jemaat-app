@@ -1,4 +1,5 @@
 "use client";
+
 import {
   BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid
 } from "recharts";
@@ -6,14 +7,27 @@ import * as XLSX from "xlsx";
 import { saveAs } from "file-saver";
 import { useMemo } from "react";
 
-export default function AdminDashboard({ keluarga }: { keluarga: any[] }) {
+// ✅ Definisikan tipe anggota dan keluarga
+type Anggota = {
+  nama: string;
+  tanggalLahir: string;
+};
+
+type Keluarga = {
+  id: string;
+  kepalaKeluarga: string;
+  noKK: string;
+  alamat: string;
+  anggota: Anggota[];
+};
+
+export default function AdminDashboard({ keluarga }: { keluarga: Keluarga[] }) {
   let dewasa = 0;
   let anak = 0;
   const pertahun: Record<string, number> = {};
 
   keluarga.forEach((kel) => {
-    const anggota = kel.anggota as { nama: string; tanggalLahir: string }[];
-    anggota.forEach((a) => {
+    kel.anggota.forEach((a) => {
       const tahun = new Date(a.tanggalLahir).getFullYear().toString();
       const umur = new Date().getFullYear() - parseInt(tahun);
 
