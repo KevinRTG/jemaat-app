@@ -4,12 +4,13 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import clsx from 'clsx';
+import Image from 'next/image';
 
 const navItems = [
   { label: 'Beranda', href: '/' },
   { label: 'Tentang', href: '/tentang' },
   { label: 'Jadwal', href: '/jadwal' },
-  { label: 'Aplikasi', href: '/aplikasi' },
+  { label: 'Daftar Jemaat', href: '/app' },
   { label: 'Kontak', href: '/kontak' },
 ];
 
@@ -24,7 +25,7 @@ export default function Navbar() {
   }, []);
 
   const textColor = scrolled ? 'text-gray-800' : 'text-white';
-  const hoverColor = scrolled ? 'hover:text-blue-600' : 'hover:text-blue-300';
+  const hoverColor = scrolled ? 'hover:text-black-600' : 'hover:text-black';
 
   return (
     <header
@@ -49,15 +50,29 @@ export default function Navbar() {
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-8 text-base font-medium transition-colors duration-300">
           {navItems.map((item) => (
-            <li key={item.href}>
+          <li key={item.href}>
+            {item.label === 'Daftar Jemaat' ? (
               <Link
                 href={item.href}
-                className={clsx(textColor, hoverColor, 'transition-colors duration-300')}
+                className="px-6 py-3 text-base bg-blue-900 text-white rounded-md hover:bg-blue-700 transition-colors duration-300"
               >
                 {item.label}
               </Link>
-            </li>
-          ))}
+            ) : (
+              <Link
+              href={item.href}
+              className={clsx(
+                textColor,
+                hoverColor,
+                'transition-all duration-300 px-4 py-3 rounded-md hover:bg-blue-100'
+              )}
+            >
+              {item.label}
+            </Link>
+
+            )}
+          </li>
+        ))}
         </ul>
 
         {/* Mobile Menu Toggle */}
