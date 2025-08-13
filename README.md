@@ -118,7 +118,7 @@ This project is provided for viewing and educational purposes only.
 
 All rights are reserved by the author. Unauthorized use, reproduction, modification, or distribution of this software is strictly prohibited without prior written permission.
 
-Please refer to the [NOTICE.txt](./NOTICE.txt) file for detailed usage terms.
+Please refer to the [NOTICE.txt](https://github.com/KevinRTG/jemaat-app/blob/master/NOTICE) file for detailed usage terms.
 
 For licensing inquiries or collaboration requests, contact: kevinsuyadi2017@gmail.com
 
