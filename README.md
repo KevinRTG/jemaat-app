@@ -6,12 +6,12 @@
   <br />
 
   <div>
-    <img src="https://img.shields.io/badge/-Next_JS-black?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js" />
-    <img src="https://img.shields.io/badge/-Prisma-black?style=for-the-badge&logo=prisma&logoColor=white" alt="Prisma" />
-    <img src="https://img.shields.io/badge/-Tailwind_CSS-black?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
-    <img src="https://img.shields.io/badge/-TypeScript-black?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-    <img src="https://img.shields.io/badge/-Vercel-black?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel" />
-    <img src="https://img.shields.io/badge/-PostgreSQL-black?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
+    [![Next.js](https://img.shields.io/badge/-Next_JS-black?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
+    [![Prisma](https://img.shields.io/badge/-Prisma-black?style=for-the-badge&logo=prisma&logoColor=white)](https://www.prisma.io/)
+    [![Tailwind CSS](https://img.shields.io/badge/-Tailwind_CSS-black?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+    [![TypeScript](https://img.shields.io/badge/-TypeScript-black?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+    [![Vercel](https://img.shields.io/badge/-Vercel-black?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
+    [![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-black?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
   </div>
 
   <h3 align="center">Jemaat App: A Church-Centered Web Platform</h3>
@@ -21,70 +21,100 @@
   </div>
 </div>
 
-📋 Table of Contents
+---
+
+📋 **Table of Contents**
 
 1. 🤖 Introduction
 2. ⚙️ Tech Stack
 3. 🔋 Features
 4. 🤸 Quick Start
 5. 🛡️ Security
-6. 🔗 Resources
-7. ✍️ Author
+6. 🤝 How to Contribute
+7. 🔗 Resources
+8. 📄 License
+9. ✍️ Author
 
-🤖 Introduction
+---
 
-Jemaat App is a full-stack web application built with Next.js, Prisma, and Tailwind CSS, designed to help churches manage member data, events, and spiritual content. It emphasizes responsive design, secure access control, and meaningful user experience.
+## 🤖 Introduction
 
-⚙️ Tech Stack
+Jemaat App adalah aplikasi web _full-stack_ yang dibangun dengan Next.js, Prisma, dan Tailwind CSS. Aplikasi ini dirancang untuk membantu gereja dalam mengelola data anggota jemaat, acara, dan konten rohani. Kami menekankan desain yang responsif, kontrol akses yang aman, dan pengalaman pengguna yang bermakna.
 
-- Next.js: React framework for server-side rendering and routing.
-- Prisma: Type-safe ORM for database access.
-- Tailwind CSS: Utility-first CSS framework.
-- TypeScript: Strongly typed JavaScript for scalable development.
-- PostgreSQL: Relational database for structured data.
-- Vercel: Deployment platform optimized for Next.js.
+## ⚙️ Tech Stack
 
-🔋 Features
+- **Next.js**: Framework React untuk _server-side rendering_ dan _routing_.
+- **Prisma**: ORM (_Object-Relational Mapper_) yang _type-safe_ untuk akses database.
+- **Tailwind CSS**: Framework CSS _utility-first_ yang fleksibel.
+- **TypeScript**: Superset JavaScript dengan tipe data yang kuat untuk pengembangan yang terukur.
+- **PostgreSQL**: Database relasional untuk menyimpan data terstruktur.
+- **Vercel**: Platform untuk _deployment_ yang dioptimalkan untuk Next.js.
 
-👉 Member registration and management  
-👉 Role-based access control (admin/user)  
-👉 Responsive design for mobile and desktop  
-👉 API integration for dynamic content  
-👉 SEO optimization and fast deployment  
-👉 Middleware for route protection  
-👉 Clean and modular codebase
+## 🔋 Features
 
-🤸 Quick Start
+- **Manajemen Anggota:** Pendaftaran dan pengelolaan data anggota jemaat yang komprehensif.
+- **Kontrol Akses Berbasis Peran:** Sistem peran `admin` dan `user` untuk keamanan.
+- **Desain Responsif:** Tampilan yang optimal di perangkat mobile dan desktop.
+- **Integrasi API:** Integrasi API untuk konten yang dinamis.
+- **Optimasi SEO:** Dioptimalkan untuk mesin pencari dan _deployment_ yang cepat.
+- **Middleware untuk Proteksi Rute:** Keamanan tambahan untuk rute yang sensitif.
+- **Basis Kode yang Bersih dan Modular:** Kode yang mudah dibaca dan dikelola.
 
-Prerequisites
+## 🤸 Quick Start
 
-- Node.js
-- npm
-- PostgreSQL
+### **Prasyarat**
 
-Installation
+Pastikan Anda telah menginstal:
+- **Node.js** (versi 18 atau lebih tinggi)
+- **npm**
+- **PostgreSQL** (pastikan server database Anda berjalan)
 
-`bash
-git clone https://github.com/KevinRTG/jemaat-app.git
-cd jemaat-app
-npm install
-npm run dev
-`
+### **Langkah-langkah Instalasi**
 
-Visit http://localhost:3000 to view the app.
+1.  **Kloning Repositori:**
+    ```bash
+    git clone [https://github.com/KevinRTG/jemaat-app.git](https://github.com/KevinRTG/jemaat-app.git)
+    cd jemaat-app
+    ```
+2.  **Instal Dependensi:**
+    ```bash
+    npm install
+    ```
+3.  **Konfigurasi Database:**
+    * Buat file `.env` di root folder proyek Anda.
+    * Salin isi dari `.env.example` ke dalam file `.env`.
+    * Sesuaikan `DATABASE_URL` dengan kredensial database PostgreSQL Anda.
+4.  **Jalankan Aplikasi:**
+    ```bash
+    npm run dev
+    ```
+    Aplikasi akan berjalan di `http://localhost:3000`.
 
-🛡️ Security
+## 🛡️ Security
 
-- Middleware for protecting admin routes
-- Environment variables for sensitive configs
-- Role-based access logic
+- **Middleware** untuk melindungi rute admin.
+- Penggunaan **_environment variables_** untuk konfigurasi sensitif.
+- Logika akses berbasis peran (`role-based access`).
 
-🔗 Resources
+## 🤝 How to Contribute
 
-- Next.js Docs
-- Prisma Docs
-- Tailwind CSS Docs
+Kami sangat menghargai kontribusi Anda! Jika Anda menemukan _bug_, ingin mengusulkan fitur baru, atau membantu memperbaiki kode, silakan:
+1.  Fork repositori ini.
+2.  Buat branch baru (`git checkout -b feature/nama-fitur`).
+3.  Lakukan _commit_ pada perubahan Anda (`git commit -m 'Tambahkan fitur X'`).
+4.  _Push_ ke branch Anda (`git push origin feature/nama-fitur`).
+5.  Buka Pull Request.
 
-✍️ Author
+## 🔗 Resources
 
-Developed by KevinRTG — passionate about building meaningful applications that serve real communities.
+- [Next.js Docs](https://nextjs.org/docs)
+- [Prisma Docs](https://www.prisma.io/docs)
+- [Tailwind CSS Docs](https://tailwindcss.com/docs)
+
+## 📄 License
+
+Proyek ini dilisensikan di bawah **MIT License**. Lihat file `LICENSE` untuk detailnya.
+
+## ✍️ Author
+
+Dikembangkan oleh KevinRTG — bersemangat dalam membangun aplikasi yang bermakna untuk melayani komunitas.
