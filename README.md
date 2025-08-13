@@ -39,7 +39,8 @@
 
 ## 🤖 Introduction
 
-Jemaat App adalah platform web full-stack modern yang dirancang untuk menjadi solusi terpadu bagi gereja, berfungsi sebagai website profil publik sekaligus aplikasi manajemen jemaat. Dibangun dengan Next.js, Prisma, dan Tailwind CSS, aplikasi ini memungkinkan gereja untuk menampilkan informasi penting seperti jadwal ibadah dan visi-misi secara online, sambil menyediakan tools internal yang aman dan efisien bagi pengurus untuk mengelola data anggota, pendaftaran jemaat, dan aktivitas gereja. Dengan desain yang responsif dan fitur yang terintegrasi, Jemaat App bertujuan untuk menyederhanakan administrasi gereja dan meningkatkan interaksi antara pengurus dan seluruh anggota jemaat.
+Jemaat App adalah platform web **_full-stack_** modern yang dirancang untuk menjadi solusi terpadu bagi gereja, berfungsi sebagai **_website_ profil publik** sekaligus **aplikasi manajemen jemaat**. Dibangun dengan **Next.js**, **Prisma**, dan **Tailwind CSS**, aplikasi ini memungkinkan gereja untuk menampilkan informasi penting seperti jadwal ibadah dan visi-misi secara online, sambil menyediakan _tools_ internal yang aman dan efisien bagi pengurus untuk mengelola data anggota, pendaftaran jemaat, dan aktivitas gereja. Dengan desain yang responsif dan fitur yang terintegrasi, Jemaat App bertujuan untuk menyederhanakan administrasi gereja dan meningkatkan interaksi antara pengurus dan seluruh anggota jemaat.
+
 
 ## ⚙️ Tech Stack
 
