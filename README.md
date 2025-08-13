@@ -116,7 +116,8 @@ Kami sangat menghargai kontribusi Anda! Jika Anda menemukan _bug_, ingin mengusu
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Proyek ini dilisensikan di bawah **MIT License**. Lihat file `LICENSE` untuk detailnya.
+Proyek ini dilisensikan di bawah **[MIT License](https://github.com/KevinRTG/jemaat-app/blob/main/LICENSE)**.
+
 
 ## ✍️ Author
 
