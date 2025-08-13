@@ -5,13 +5,13 @@
     </a>
   <br />
 
-  <div>
-    [![Next.js](https://img.shields.io/badge/-Next_JS-black?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
-    [![Prisma](https://img.shields.io/badge/-Prisma-black?style=for-the-badge&logo=prisma&logoColor=white)](https://www.prisma.io/)
-    [![Tailwind CSS](https://img.shields.io/badge/-Tailwind_CSS-black?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
-    [![TypeScript](https://img.shields.io/badge/-TypeScript-black?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-    [![Vercel](https://img.shields.io/badge/-Vercel-black?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
-    [![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-black?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
+   <div>
+    <img src="https://img.shields.io/badge/-Next_JS-black?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js" />
+    <img src="https://img.shields.io/badge/-Prisma-black?style=for-the-badge&logo=prisma&logoColor=white" alt="Prisma" />
+    <img src="https://img.shields.io/badge/-Tailwind_CSS-black?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
+    <img src="https://img.shields.io/badge/-TypeScript-black?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+    <img src="https://img.shields.io/badge/-Vercel-black?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel" />
+    <img src="https://img.shields.io/badge/-PostgreSQL-black?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
   </div>
 
   <h3 align="center">Jemaat App: A Church-Centered Web Platform</h3>
