@@ -1,7 +1,7 @@
 <div align="center">
   <br />
     <a href="https://github.com/KevinRTG/jemaat-app" target="_blank">
-      <img src="https://images.app.goo.gl/1TDh2ZEzhVHuA6Xb7" alt="Jemaat App Banner">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSev6WAvha6FJ0E-rZwOdFF34cAthuCbsFenTKifWVpa6maoNbsyiS1Eyoo&s=10" alt="Jemaat App Banner">
     </a>
   <br />
 
