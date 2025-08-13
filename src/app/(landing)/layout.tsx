@@ -1,6 +1,7 @@
 import Navbar from '@/components/Navbar';
 import ClientLayoutWrapper from '@/components/ClientLayoutWrapper';
 import type { Metadata } from 'next';
+import { inter } from '@/fonts';
 
 export const metadata: Metadata = {
   title: 'GKO Cibitung',
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="bg-gray-50">
+      <body className={`${inter.variable} bg-gray-50`}>
         <Navbar />
         <ClientLayoutWrapper>
           <main>{children}</main>

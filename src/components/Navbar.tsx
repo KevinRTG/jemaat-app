@@ -10,7 +10,7 @@ const navItems = [
   { label: 'Beranda', href: '/' },
   { label: 'Tentang', href: '/tentang' },
   { label: 'Jadwal', href: '/jadwal' },
-  { label: 'Daftar Jemaat', href: '/app' },
+  { label: 'Daftar Jemaat', href: '/daftarjemaat' },
   { label: 'Kontak', href: '/kontak' },
 ];
 
