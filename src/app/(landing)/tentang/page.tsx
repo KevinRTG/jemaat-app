@@ -1,7 +1,9 @@
-// src/app/(profil)/tentang/page.tsx
+// src/app/(landing)/tentang/page.tsx
 
 import HeaderImage from "@/components/ui/HeaderImage";
 import VisiMisi from "@/components/ui/VisiMisi";
+import SejarahGereja from "@/components/ui/SejarahGereja";
+import StrukturPengurus from "@/components/ui/StrukturPengurus";
 
 export default function AboutPage() {
   return (
@@ -16,6 +18,8 @@ export default function AboutPage() {
         </h1>
 
         <VisiMisi />
+        <SejarahGereja />
+        <StrukturPengurus />
 
         {/* Tambahkan komponen lain seperti SejarahGereja, GembalaPengurus, dll */}
       </div>

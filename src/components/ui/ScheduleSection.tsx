@@ -2,7 +2,7 @@ export default function ScheduleSection() {
   const schedules = [
     { title: 'Ibadah Umum Minggu', time: 'Minggu, pukul 08.00 & 10.00 WIB' },
     { title: 'Ibadah Sekolah Minggu', time: 'Minggu, pukul 07.00 WIB' },
-    { title: 'Ibadah Pem & Rem', time: 'Minggu, pukul 14.00 WIB' },
+    { title: 'Ibadah Pemuda & Remaja', time: 'Minggu, pukul 14.00 WIB' },
     { title: 'Ibadah PW', time: 'Selasa Ke-2 & Ke-4, pukul 17.00 WIB' },
     { title: 'Ibadah Lansia', time: 'Sabtu Ke-1 & Ke-4, pukul 16.00 WIB' },
     { title: 'Ibadah Pelpri', time: 'Sabtu, pukul 19.00 WIB (Minggu ke-2)' },
