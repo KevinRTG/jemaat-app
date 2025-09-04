@@ -25,7 +25,7 @@ export default function Navbar() {
   }, []);
 
   const textColor = scrolled ? 'text-gray-800' : 'text-white';
-  const hoverColor = scrolled ? 'hover:text-black-600' : 'hover:text-black';
+  const hoverColor = scrolled ? 'hover:text-blue-900' : 'hover:text-blue-900';
 
   return (
     <header
@@ -42,7 +42,7 @@ export default function Navbar() {
             alt="Logo Gereja"
             className="h-10 w-auto"
           />
-          <span className={clsx('text-2xl font-extrabold tracking-wide transition-colors duration-300', textColor)}>
+          <span className={clsx('text-2xl font-extrabold tracking-wide transition-colors duration-300', hoverColor, textColor)}>
             GKO Cibitung
           </span>
         </Link>

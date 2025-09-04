@@ -42,7 +42,7 @@ export default function HeroSlider() {
         )}
       </AnimatePresence>
 
-      <div className="absolute inset-0 bg-blue-900/60"></div>
+      <div className="absolute inset-0 bg-black/40"></div>
 
       {/* Arrows */}
       <motion.button

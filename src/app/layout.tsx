@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { inter } from '@/fonts';
+import { inter } from '@/lib/fonts';
 import "./globals.css";
-import ClientProvider from "./client-provider"; // ⬅️ Import ini
+import ClientProvider from "./client-provider";
 import { Analytics } from "@vercel/analytics/next"
 
 export const metadata: Metadata = {

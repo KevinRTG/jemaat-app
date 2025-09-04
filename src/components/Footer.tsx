@@ -4,12 +4,12 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-blue-900 text-white pt-10 pb-6 mt-20">
+    <footer className="bg-blue-900 text-white text-center pt-10 pb-6 mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
         {/* Tentang Gereja */}
         <div>
           <h3 className="text-lg sm:text-xl font-semibold mb-4">GKO Cibitung</h3>
-          <p className="text-sm leading-relaxed text-justify">
+          <p className="text-sm leading-relaxed text-center">
             Melayani dengan kasih dan sukacita untuk kemuliaan nama Tuhan. Didirikan pada 28 Oktober 1988, GKO Cibitung terus menjadi terang di tengah masyarakat dengan misi menyebarkan Injil, menumbuhkan iman, dan melayani sesama dengan tulus.
           </p>
         </div>

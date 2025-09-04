@@ -1,7 +1,7 @@
 import Navbar from '@/components/Navbar';
 import ClientLayoutWrapper from '@/components/ClientLayoutWrapper';
 import type { Metadata } from 'next';
-import { inter } from '@/fonts';
+import { inter } from '@/lib/fonts';
 
 export const metadata: Metadata = {
   title: 'GKO Cibitung',
