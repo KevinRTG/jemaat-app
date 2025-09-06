@@ -1,8 +1,11 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useLoading } from '@/components/ClientLayoutWrapper';
 
 export default function AboutSection() {
+  const { isLoading } = useLoading();
+
   return (
     <section id="tentang" className="container mx-auto px-6 py-20">
       <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -10,7 +13,8 @@ export default function AboutSection() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          animate={!isLoading ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 1.8, delay: 1.0 }}
           viewport={{ once: true }}
           className="space-y-6"
         >
@@ -35,7 +39,7 @@ export default function AboutSection() {
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.8, delay: 1.0 }}
           viewport={{ once: true }}
         >
           <img

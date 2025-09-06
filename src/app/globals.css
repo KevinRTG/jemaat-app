@@ -27,3 +27,11 @@ body {
 .btn {
   @apply px-4 py-2 rounded font-semibold text-white bg-blue-600 hover:bg-blue-700 transition;
 }
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.spin {
+  animation: spin 1.5s linear infinite;
+}

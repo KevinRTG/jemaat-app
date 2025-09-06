@@ -3,6 +3,7 @@ import HeroSlider from '@/components/ui/HeroSlider';
 import AboutSection from '@/components/ui/AboutSection';
 import ScheduleSection from '@/components/ui/ScheduleSection';
 import CallToAction from '@/components/ui/CallToAction';
+import LatestYoutubeVideo from '@/components/ui/LatestYoutubeVideo';
 
 export default function HomePage() {
   return (
@@ -12,6 +13,7 @@ export default function HomePage() {
       <AboutSection />
       <ScheduleSection />
       <CallToAction />
+      <LatestYoutubeVideo /> 
     </main>
   );
 }
