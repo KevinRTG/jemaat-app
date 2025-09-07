@@ -51,7 +51,7 @@ export default function LatestYoutubeVideo() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Judul */}
         <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-blue-900 tracking-tight">
             Video Terbaru dari Channel Kami
           </h2>
           <p className="mt-3 text-lg text-gray-600 max-w-2xl mx-auto">
@@ -97,7 +97,7 @@ export default function LatestYoutubeVideo() {
             href={`https://www.youtube.com/channel/${CHANNEL_ID}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-6 py-3 bg-blue-900 text-white font-medium rounded-lg shadow hover:bg-red-600 transition-colors duration-300"
+            className="inline-block px-6 py-3 bg-blue-900 text-white font-semibold rounded-full shadow hover:bg-red-600 transition-colors duration-300"
           >
             Lihat Semua Video
           </a>

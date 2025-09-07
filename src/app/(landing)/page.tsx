@@ -4,6 +4,7 @@ import AboutSection from '@/components/ui/AboutSection';
 import ScheduleSection from '@/components/ui/ScheduleSection';
 import CallToAction from '@/components/ui/CallToAction';
 import LatestYoutubeVideo from '@/components/ui/LatestYoutubeVideo';
+import RenunganHarian from '@/components/ui/RenunganHarian';
 
 export default function HomePage() {
   return (
@@ -14,6 +15,7 @@ export default function HomePage() {
       <ScheduleSection />
       <CallToAction />
       <LatestYoutubeVideo /> 
+      <RenunganHarian />
     </main>
   );
 }
